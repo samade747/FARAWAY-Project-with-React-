@@ -1,16 +1,28 @@
 import { useState } from "react"
 
-export const Form = () => {
+export const Form = ({  }) => {
 
+    const [quantity, setQuantity] = useState(1)
 
-const [quantity, setQuantity] = useState(1)
+    const addItem = () => {
+        
+    }
 
 
 return (
-    <div>
+    <div style={{
+        backgroundColor: "#df6b1b",
+        padding: "10px 0px",
+        color: "#583116",
+        fontWeight: "1000",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: 'center',
+        gap: "20px"
+    }}>
         <p>  What do you need for your trip? </p>
     
-    <label for="cars">Choose Quantity and Name:</label> 
+    <label for="items">Choose Quantity and Name:</label> 
 
     <select onChange={(e) => setQuantity(e.target.value)} name="quantity" id="quantity">
             <option value="1">1</option>
@@ -18,9 +30,9 @@ return (
             <option value="3">3</option>
             <option value="4">4</option>
     </select>
-    
+    <input onChange={(e) => setQuantity(e.target.value)} type="text" placeholder="add your items" />
 
-
+    <button onClick={addItem}>Add</button>
     </div>
 )
 
