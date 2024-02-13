@@ -1,7 +1,6 @@
 import { useState } from "react"; 
 
 export const ItemList = ({ item, setItemsArr }) => { // Declaring a functional component called ItemList, which receives 'item' and 'setItemsArr' as props
-
     return(
         <div style={{ // Returning JSX: a div element with inline styling
             display: "flex",
@@ -21,7 +20,7 @@ export const ItemList = ({ item, setItemsArr }) => { // Declaring a functional c
             ))
         }
         {
-          
+
         }
         </div>
     )
@@ -33,8 +32,7 @@ const Item = ({ samad, number, setItemsArr, itemList}) => { // Declaring a funct
     merayItems[number].packed = !packingValue // Toggling the 'packed' property of the item at the specified index
     setItemsArr(merayItems) // Updating the state of the items array with the modified copy
   }
-  return 
-  (
+  return (
     <div style={{
        display: "flex",
        gap: "10px"
