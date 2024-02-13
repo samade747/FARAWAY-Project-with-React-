@@ -1,9 +1,7 @@
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import LuggageIcon from '@mui/icons-material/Luggage';
 
-export const Logo = () => {
-    
-    
+export const Logo = () => {      
     return (
         <div style={{
            width: "100%",

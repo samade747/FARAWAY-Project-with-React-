@@ -1,4 +1,4 @@
-import { useState } from "react"; // Importing the useState hook from React
+import { useState } from "react"; 
 
 export const ItemList = ({ item, setItemsArr }) => { // Declaring a functional component called ItemList, which receives 'item' and 'setItemsArr' as props
 
@@ -19,6 +19,9 @@ export const ItemList = ({ item, setItemsArr }) => { // Declaring a functional c
               />
                 
             ))
+        }
+        {
+          
         }
         </div>
     )
