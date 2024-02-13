@@ -1,11 +1,21 @@
 import { useState } from "react"
 
-export const Form = ({  }) => {
+export const Form = ({ setItemArr, item }) => {
 
+    const [itemName, setItemName] = useState("")
     const [quantity, setQuantity] = useState(1)
 
     const addItem = () => {
-        
+        const meraItem = [...item]
+        meraItem.push({
+            quantity: quantity,
+            name: itemName,
+            packed: false,
+        })
+        setItemArr(meraItem)
+
+
+
     }
 
 
