@@ -1,9 +1,11 @@
+// Importing necessary icons from MU
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import LuggageIcon from '@mui/icons-material/Luggage';
 
+// Component for the logo
 export const Logo = () => {      
     return (
-        <div style={{
+        <div style={{ // Styling for the logo container
            width: "100%",
            backgroundColor: "#f19720",
            display: "flex",
@@ -17,11 +19,11 @@ export const Logo = () => {
             
 
         }}>
-        <div><AccountTreeIcon /></div>
+        <div><AccountTreeIcon /></div> // Icon
         
-            FAR AWAY
+            FAR AWAY // Text
 
-            <div><LuggageIcon /></div>
+            <div><LuggageIcon /></div> // Icon
 
         </div>
     )

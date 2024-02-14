@@ -1,6 +1,6 @@
 import { useState } from "react"; 
 
-export const ItemList = ({ item, setItemsArr }) => { // Declaring a functional component called ItemList, which receives 'item' and 'setItemsArr' as props
+export const ItemList = ({ item, setItemArr }) => { // Declaring a functional component called ItemList, which receives 'item' and 'setItemsArr' as props
     return(
         <div style={{ // Returning JSX: a div element with inline styling
             display: "flex",
@@ -12,7 +12,7 @@ export const ItemList = ({ item, setItemsArr }) => { // Declaring a functional c
             item?.map((singleItem, indx) => ( // Mapping over the 'item' array to render each individual item
               <Item 
                 itemList={item} // Passing 'item' array as prop to each Item component
-                setItemsArr={setItemsArr} // Passing 'setItemsArr' function as prop to each Item component
+                setItemsArr={setItemArr} // Passing 'setItemsArr' function as prop to each Item component
                 samad={singleItem}
                 number={indx}
               />

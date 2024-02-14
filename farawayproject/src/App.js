@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function App() {
  
-  const [itemsArr, setItemArr] = useState(
+  const [itemsArr, setItemsArr] = useState(
     [
       {
         quantity: 4,
@@ -36,8 +36,8 @@ function App() {
   return (
     <>
     <Logo />
-    <Form setItemArr={setItemArr} item={itemsArr} />
-    <PackagingList item={itemsArr} setItemArr={setItemArr} />
+    <Form setItemsArr={setItemsArr} item={itemsArr} />
+    <PackagingList item={itemsArr} setItemArr={setItemsArr} />
     </>
     )
 }
