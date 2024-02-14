@@ -1,52 +1,58 @@
+// Importing useState hook from React
 import { useState } from "react"; 
 
-export const ItemList = ({ item, setItemArr }) => { // Declaring a functional component called ItemList, which receives 'item' and 'setItemsArr' as props
+// Component to display the list of items
+export const ItemList = ({ item, setItemsArr }) => { // Declaring a functional component called ItemList, which receives 'item' and 'setItemsArr' as props
     return(
-        <div style={{ // Returning JSX: a div element with inline styling
+        <div style={{ // Styling for the item list container
             display: "flex",
             flexWrap: "wrap",
             width: "50%",
             margin: "0px auto"
         }}>
         {
-            item?.map((singleItem, indx) => ( // Mapping over the 'item' array to render each individual item
+          // Mapping over each item in the array
+            item?.map((singleItem, indx) => ( 
               <Item 
                 itemList={item} // Passing 'item' array as prop to each Item component
-                setItemsArr={setItemArr} // Passing 'setItemsArr' function as prop to each Item component
+                setItemsArr={setItemsArr} // Passing 'setItemsArr' function as prop to each Item component
                 samad={singleItem}
                 number={indx}
               />
                 
             ))
-        }
-        {
+    
+    
 
         }
         </div>
     )
 }
 
-const Item = ({ samad, number, setItemsArr, itemList}) => { // Declaring a functional component called Item, which receives 'haroon', 'number', 'setItemsArr', and 'itemList' as props
+// Component for an individual item
+const Item = ({ samad, number, setItemsArr, itemList}) => { 
+  // Function to handle checkbox state changes
   const packedHandler = (packingValue, itemNumber) =>{ // Defining a function called 'packedHandler' to handle checkbox state changes
-    const merayItems = [...itemList] // creatin a copy of the 'itemList' array
-    merayItems[number].packed = !packingValue // Toggling the 'packed' property of the item at the specified index
-    setItemsArr(merayItems) // Updating the state of the items array with the modified copy
+    const merayItems = [...itemList] // Copying the items array
+    merayItems[number].packed = !packingValue // Toggling the 'packed' property of the item
+    setItemsArr(merayItems) // Updating the items array with the modified copy
   }
   return (
+    //  Styling for the item container
     <div style={{
        display: "flex",
        gap: "10px"
     }}>
-      <input type="checkbox" checked={samad.packed} onChange={() => packedHandler(samad.packed, number)} />
-      <p style={{
+      <input type="checkbox" checked={samad.packed} onChange={() => packedHandler(samad.packed, number)} /> {/* Checkbox for packing */}
+      <p style={{ // Styling for the item name
         color: "#dbc69b",
-        textDecoration: samad.packed ? "line-through" : "none"
+        textDecoration: samad.packed ? "line-through" : "none" // Strikethrough if item is packed
       }}>
       {
         `${samad.quantity} ${samad.name}`
       }
       </p>
-      <p>X</p>
+      <p>X</p> {/* Placeholder for delete button */}
     </div>
   )
 }

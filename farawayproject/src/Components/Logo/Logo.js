@@ -5,7 +5,8 @@ import LuggageIcon from '@mui/icons-material/Luggage';
 // Component for the logo
 export const Logo = () => {      
     return (
-        <div style={{ // Styling for the logo container
+        // Styling for the logo container
+        <div style={{ 
            width: "100%",
            backgroundColor: "#f19720",
            display: "flex",
@@ -21,7 +22,8 @@ export const Logo = () => {
         }}>
         <div><AccountTreeIcon /></div> // Icon
         
-            FAR AWAY // Text
+        // Text
+            FAR AWAY 
 
             <div><LuggageIcon /></div> // Icon
 
