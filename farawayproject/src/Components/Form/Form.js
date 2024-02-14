@@ -2,7 +2,7 @@
 import { useState } from "react"
 
 // Component for the form to add items
-export const Form = ({ setItemArr, item }) => {
+export const Form = ({ setItemsArr, item }) => {
     const [itemName, setItemName] = useState("") // Component for the form to add items
     const [quantity, setQuantity] = useState(1) // State for item quantity
 
@@ -14,7 +14,7 @@ export const Form = ({ setItemArr, item }) => {
             name: itemName,
             packed: false,
         })
-        setItemArr(meraItem) // Updating the items array with the new item
+        setItemsArr(meraItem) // Updating the items array with the new item
 
 
     }
@@ -44,7 +44,7 @@ return (
             <option value="4">4</option>
     </select>
     <input
-    onChange={(e) => setQuantity(e.target.value)}
+    onChange={(e) => setItemName(e.target.value)}
     type="text" placeholder="add your items" />
     
     <button onClick={addItem}>Add</button> // Button to add item 

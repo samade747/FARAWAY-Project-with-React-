@@ -18,12 +18,8 @@ export const ItemList = ({ item, setItemsArr }) => { // Declaring a functional c
                 setItemsArr={setItemsArr} // Passing 'setItemsArr' function as prop to each Item component
                 samad={singleItem}
                 number={indx}
-              />
-                
+              />                
             ))
-    
-    
-
         }
         </div>
     )
@@ -52,7 +48,7 @@ const Item = ({ samad, number, setItemsArr, itemList}) => {
         `${samad.quantity} ${samad.name}`
       }
       </p>
-      <p>X</p> {/* Placeholder for delete button */}
+      <p>X</p> 
     </div>
   )
 }
