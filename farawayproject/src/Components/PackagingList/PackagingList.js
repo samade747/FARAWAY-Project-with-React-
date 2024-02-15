@@ -15,7 +15,7 @@ export const PackagingList = ({ item, setItemsArr }) => {
             backgroundColor: "#4c3423"
         }}>
             <ItemList item={item} setItemsArr={setItemsArr}/> {/* Displaying the item list */}
-            <BottomButtons /> {/* Component for bottom buttons */}
+            <BottomButtons setItemsArr={setItemsArr} /> {/* Component for bottom buttons */}
         </div>
     )
 }

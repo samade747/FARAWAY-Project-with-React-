@@ -34,11 +34,11 @@ function App() {
   // Rendering components: Logo, Form, PackagingList
   return (
     <>
-      <Logo />  {/* Displaying the logo */}
+      <Logo />  
       <Form setItemsArr={setItemsArr} item={itemsArr} /> {/* Displaying the form */}
       <PackagingList item={itemsArr} setItemsArr={setItemsArr} /> {/* Displaying the packaging list */}
     </>
   );
 }
 
-export default App; // Exporting the App component
+export default App; 
