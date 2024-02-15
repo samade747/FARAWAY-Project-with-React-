@@ -4,9 +4,7 @@ export const BottomButtons = () => {
             <button style={{
                 backgroundColor: "#fde7aa"
             }}>Sort</button>
-            <button style={{
-                backgroundColor: "#fde7aa"
-            }}>Clear List</button>
+            <button onClick={clearAllItems} style={{ backgroundColor: "#fde7aa" }}>Clear List</button>
         </div>
     )
 }
