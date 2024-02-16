@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 
 export const BottomButtons = ({ itemsArr, setItemsArr }) => {
 
@@ -22,12 +22,30 @@ export const BottomButtons = ({ itemsArr, setItemsArr }) => {
     }
 };
 
+const sortByInputOrder = () => {
+    // copying the array 
+    const sortedItems = [...itemsArr];
+    // sorting the items based on input order
+    sortedItems.sort((a, b) => a.inputOrder - b.inputOrder)
+    setItemsArr(sortedItems);
+    
+}
 
+const sortByDescription = () => {
+// copying the array 
+    var sortedItems = [...itemsArr];
+// sort the items alphabitcaly 
+    sortedItems.sort((a, b) => a.name.localeCompare(b.name));
+setItemsArr(sortedItems)
+}
 
+const sortByPackdedStatus = () => {
+    const sortedItems = [...itemsArr]
+    sortedItems.sort((a, b) => (a.packed === b.packed) ? 0 : a.packed ? 1 : -1)
+    setItemsArr(sortedItems)
+}
 
-
-
-    return (
+return (
         <div>
             <select onChange={handleSortChange}>
                 <option value="">sort By</option>

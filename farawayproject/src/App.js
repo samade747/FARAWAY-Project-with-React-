@@ -3,7 +3,8 @@ import './App.css';
 import { Logo } from './Components/Logo/Logo';
 import { Form } from './Components/Form/Form';
 import { PackagingList } from './Components/PackagingList/PackagingList';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { BottomButtons } from './Components/BottomButtons';
 
 // Main App component
 function App() { 
@@ -37,6 +38,7 @@ function App() {
       <Logo />  
       <Form setItemsArr={setItemsArr} item={itemsArr} /> {/* Displaying the form */}
       <PackagingList item={itemsArr} setItemsArr={setItemsArr} /> {/* Displaying the packaging list */}
+     
     </>
   );
 }
