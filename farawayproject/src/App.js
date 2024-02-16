@@ -37,8 +37,7 @@ function App() {
     <>
       <Logo />  
       <Form setItemsArr={setItemsArr} item={itemsArr} /> {/* Displaying the form */}
-      <PackagingList item={itemsArr} setItemsArr={setItemsArr} /> {/* Displaying the packaging list */}
-     
+      <PackagingList item={itemsArr} setItemsArr={setItemsArr} /> {/* Displaying the packaging list */}      
     </>
   );
 }
